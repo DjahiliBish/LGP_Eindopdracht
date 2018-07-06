@@ -170,6 +170,19 @@ h6 { font-size: 14px; }
     padding-top: 10px;
 }
 
+.seperator{
+    padding: 0px 10px 0px 10px;
+}
+
+.card-text{
+    font-size: 12px;
+}
+
+.notfound {
+    display: block;
+    margin: 0px auto;
+    padding: 50px 0px 25px 0px;
+}
 /*
 Extra small (xs) devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap

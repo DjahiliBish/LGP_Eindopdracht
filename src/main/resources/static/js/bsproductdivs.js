@@ -1,9 +1,11 @@
+/* Function to write product divs from the JSON response*/
+
+
 function writediv(jsondata) {
     var newdiv = '';
     var id = 0;
     if (jsondata.length > 0) {
     for (var i = 0; i < jsondata.length; i++) {
-        //id = jsondata[i]._links.model.href.substring(29);
         id = jsondata[i]._links.model.href.substring(jsondata[i]._links.model.href.lastIndexOf('/')+ 1);
         newdiv += '<div class="col-lg-4 col-md-6 mb-4"><div class="card h-100">';
         newdiv += '<img class="card-img-top" src="../images/' + id +'.jpg" alt="' + jsondata[i].merk + ' - ' + jsondata[i].naam + '">';
@@ -17,21 +19,18 @@ function writediv(jsondata) {
         } else {
             newdiv += '<tr><td>Kinderzitje</td><td class="seperator">:</td><td>nee</td>';
         }
-
         var kleuren = "";
         for (var j = 0; j < jsondata[i].kleurCollection.length; j++) {
             kleuren += jsondata[i].kleurCollection[j].naam + " / ";
         }
         kleuren = kleuren.substring(0, kleuren.length - 2);
         newdiv += '<tr><td>Kleuren opties</td><td class="seperator">:</td><td>' + kleuren + '</td>';
-
         var frametypes = "";
         for (var j = 0; j < jsondata[i].hdkCollection.length; j++) {
             frametypes += jsondata[i].hdkCollection[j].naam + " / ";
         }
         frametypes = frametypes.substring(0, frametypes.length - 2);
         newdiv += '<tr><td>Frame type</td><td class="seperator">:</td><td>' + frametypes + '</td>';
-
         var framehoogtes = "";
         for (var j = 0; j < jsondata[i].framehoogteCollection.length; j++) {
             framehoogtes += jsondata[i].framehoogteCollection[j].hoogte + " / ";
@@ -43,13 +42,17 @@ function writediv(jsondata) {
     }
         }
         else {
-            newdiv +='<div><div><img class="center-block" src="../images/sad-face.png" alt="sad emoij"></div>';
+            newdiv +='<div class="justify-content-center"><div><img class="center-block" src="../images/sad-face.png" alt="sad emoij"></div>';
             newdiv +='<h2 style="text-align: center">Helaas, er zijn geen producten gevonden.</h2>';
             newdiv +='<h2 style="text-align: center">Pas uw zoekopdracht aan en probeer het nog eens</h2></div>';
     }
     window.scrollTo(0, 0);
     document.getElementById('products').innerHTML = newdiv;
 }
+
+
+/* Buttons for all the search options*/
+
 $(document).ready(function() {
     $('#gazelle').click(function() {
        get("../models/search/findByMerk?merk=Gazelle")
@@ -108,6 +111,8 @@ $(document).ready(function() {
 });
 
 
+/*Ajax request too server */
+
 function get(url) {
     $(document).ready(function() {
     $('#products').empty();
@@ -117,8 +122,6 @@ function get(url) {
         dataType: 'json',
         success: function (data) {
             writediv(data._embedded.models);
-            console.log("no errors");
-            console.log("data");
         },
         error: function (requestObject, error, errorThrown) {
             console.log("error thrown, add handler to exit gracefully");
@@ -128,6 +131,5 @@ function get(url) {
     });
 }
 
-console.log("no errors, script head");
 
 
