@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/html" href="contact.html"/>
     <link rel="stylesheet" type="text/html" href="about.html"/>
     <link rel="stylesheet" class="active" type="text/html" href="product.html"/>
-    <link rel="stylesheet" type="text/html" href="/index.html"/>
+    <link rel="stylesheet" type="text/html" href="../index.html"/>
 
 </head>
 <body>
@@ -52,13 +52,13 @@
                                     </button>
                                     </h6>
                                 </header>
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                     <div class="filter-content">
                                         <div class="card-body">
                                            <!--input type="text" id="merknaam" placeholder="merk"><button id="merk" class="btn">Find</button-->
-                                            <button id="gazelle" class="btn">Gazelle</button>
-                                            <button id="batavus" class="btn">Batavus</button>
-                                            <button id="cortina" class="btn">Cortina</button>
+                                            <button id="gazelle" class="btn btn-outline-secondary btn-sm">Gazelle</button>
+                                            <button id="batavus" class="btn btn-outline-secondary btn-sm">Batavus</button>
+                                            <button id="cortina" class="btn btn-outline-secondary btn-sm">Cortina</button>
                                         </div> <!-- card-body.// -->
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                          </button>
                                      </h6>
                                 </header>
-                                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                     <div class="filter-content">
                                         <div class="card-body">
                                                 <select id="modeltype" class="form-control">
@@ -83,7 +83,7 @@
                                                     <option>moederfiets</option>
                                                     <option>hybride</option>
                                                 </select><br>
-                                                <span><button id="gettype" class="btn">GET</button></span>
+                                                <span><button id="gettype" class="btn btn-outline-secondary">GET</button></span>
                                         </div> <!-- card-body.// -->
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@
                                                     <option>54</option>
                                                     <option>59</option>
                                                 </select><br>
-                                                <button id="getframehoogte" class="btn">GET</button>
+                                                <button id="getframehoogte" class="btn btn-outline-secondary">GET</button>
                                         </div> <!-- card-body.// -->
                                     </div>
                                 </div>
@@ -128,7 +128,7 @@
                                                     <option>groen</option>
                                                     <option>rood</option>
                                                 </select><br>
-                                                <button id="getkleur" class="btn">GET</button>
+                                                <button id="getkleur" class="btn btn-outline-secondary">GET</button>
                                         </div> <!-- card-body.// -->
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@
                                                 <option>8</option>
                                                 <option>27</option>
                                             </select><br>
-                                            <button id="getversnellingen" class="btn">GET</button>
+                                            <button id="getversnellingen" class="btn btn-outline-secondary">GET</button>
                                         </div> <!-- card-body.// -->
                                     </div>
                                 </div>
@@ -172,7 +172,7 @@
                                                 <option>terugtrap</option>
                                                 <option>v-brakes</option>
                                             </select><br>
-                                            <button id="getremmen" class="btn">GET</button>
+                                            <button id="getremmen" class="btn btn-outline-secondary">GET</button>
 
                                         </div> <!-- card-body.// -->
                                     </div>
@@ -189,8 +189,8 @@
                                 <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
                                     <div class="filter-content">
                                         <div class="card-body">
-                                            <button id="kinderzitjeja" class="btn">Ja</button>
-                                            <button id="kinderzitjenee" class="btn">Nee</button>
+                                            <button id="kinderzitjeja" class="btn btn-outline-secondary">Ja</button>
+                                            <button id="kinderzitjenee" class="btn btn-outline-secondary">Nee</button>
                                         </div> <!-- card-body.// -->
                                     </div>
                                 </div>
@@ -221,7 +221,7 @@
                                                 </div>
                                                 <input type="number" value="0" class="form-control" id="budget2" aria-label="Amount (to the nearest dollar)" required>
                                                 <br>
-                                                <button id="getbudgettype" class="btn">GET</button>
+                                                <button id="getbudgettype" class="btn btn-outline-secondary">GET</button>
                                             </div>
                                         </div> <!-- card-body.// -->
                                     </div>
@@ -245,7 +245,7 @@
                                                 </div>
                                                 <input type="number" value="0" class="form-control" id="budget" aria-label="Amount (to the nearest dollar)">
                                                 <br>
-                                                <button id="getbudget" class="btn">GET</button>
+                                                <button id="getbudget" class="btn btn-outline-secondary">GET</button>
                                             </div>
                                         </div>
                                     </div><!-- card-body.// -->
@@ -256,12 +256,10 @@
                 </div>
                 <div class="col-9">
                     <div class="row pr-3" id="products">
-                            </div>
-                        </div>
 
                     </div>
-                    <!-- /.row -->
                 </div>
+                <!-- /.row -->
             </div>
         </div>
     </article>
@@ -270,13 +268,13 @@
 <div id="footer-placeholder"></div>
 
 <!-- jQuery library -->
-<script src="/bootstrap/jquery-3.3.1.min.js"></script>
+<script src="../bootstrap/jquery-3.3.1.min.js"></script>
 <!-- Popper JS -->
-<script src="/bootstrap/popper.min.js"></script>
+<script src="../bootstrap/popper.min.js"></script>
 <!-- Latest compiled JavaScript -->
-<script src="/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="/bootstrap/npm.js"></script>
-<script src="/bootstrap/bootstrap.js"></script>
+<script src="../bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../bootstrap/npm.js"></script>
+<script src="../bootstrap/bootstrap.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
